@@ -1,28 +1,22 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal } from "@angular/core";
 
-import { Place } from './place.model';
+import { Place } from "./place.model";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class PlacesService {
   private userPlaces = signal<Place[]>([]);
 
   loadedUserPlaces = this.userPlaces.asReadonly();
 
-  loadAvailablePlaces() {
-    
-  }
+  loadAvailablePlaces() {}
 
-  loadUserPlaces() {
+  loadUserPlaces() {}
 
-  }
+  addPlaceToUserPlaces(place: Place) {}
 
-  addPlaceToUserPlaces(place: Place) {
+  removeUserPlace(place: Place) {}
 
-  }
-
-  removeUserPlace(place: Place) {
-    
-  }
+  private fetchPlaces() {}
 }
